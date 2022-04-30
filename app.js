@@ -2,58 +2,29 @@
 const toggleSwitch= document.querySelector('.switch')
 const checkbox= document.querySelector('.checkbox')
 const pgOne= document.getElementById('pg1')
-const backgroundBtn= document.querySelector('.backgroundBtn')
-const circle= document.getElementById('circle')
+const span= document.querySelector('#nxtpg')
 
 
-function light(){
-    if(pgOne.style.backgroundColor='black'){
-        pgOne.style.backgroundColor= 'white'
-        // circle.style.backgroundColor= 'black'
-        
-    }
-}
-function dark(){
-    if(pgOne.style.backgroundColor='white'){
-        pgOne.style.backgroundColor= 'black'
-        // circle.style.backgroundColor= 'white'
-    }
-}
+
 toggleSwitch.addEventListener('change',function(){
     if(checkbox.checked == true){
-        console.log('stuff happening')
-        light()
+        pgOne.style.backgroundColor= 'rgb(41, 51, 70)'
 
     }else {
-        console.log('stuff isnt')
-        dark()
+        // dark()
+        pgOne.style.backgroundColor= 'black'
     }
 })
-backgroundBtn.addEventListener('click',function(){
-    if(pgOne.style.backgroundColor='white'){
-       dark()
-    }
-    else{
-        light()
-    }
 
-})
-    // if(checkbox.checked == true){
-    //     if(pgOne.style.backgroundColor= 'black'){
-    //         pgOne.style.backgroundColor = 'white'
-    //     }
-    //     else if(pgOne.style.backgroundColor= 'white'){
-    //         pgOne.style.backgroundColor = 'black'
-    //     }
-    // }
+span.onmouseover =function(){
+    // span.style.fontSize= 48
+    span.style.color= 'grey'
+    
+}
+span.onmouseout = function(){
 
-const test= document.querySelector('.test')
-test.addEventListener('click',function(){
-    console.log(test.checked)
-    if(test.checked == true){
-        console.log('its checked')
-    }else if(test.checked == false){
-        console.log('its unchecked')
-    }
-
+    span.style.color= 'white'
+}
+span.addEventListener('click',function(){
+    scroll(0,1000)
 })

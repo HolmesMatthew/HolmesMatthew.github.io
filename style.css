@@ -4,8 +4,11 @@ body {
     
     
 }
+
 #pg1 {
+  height: 100vh;
     background-color: black;
+    /* background-color: rgb(41, 51, 70); */
     color: white;
 }
 #circle {
@@ -18,8 +21,21 @@ body {
 
 
 }
-.nav {
-    /* background-color: white; */
+#nxtpg {
+
+font-size: 32px;
+}
+#nxtpg:hover {
+  font-size: 48px;
+}
+#gotopg2 {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+}
+#gotopg2:hover {
+  font-size: 48px;
+  color: #676869;
 }
 
 #blurb {
